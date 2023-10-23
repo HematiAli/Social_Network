@@ -2,6 +2,11 @@
 
 
 {% block content %}
-    home page ...
+    <div class="card">
+        {% for post in posts %}
+            <a href="{{ post.get_absolute_url }}" class="card-body">{{ post.title }}</a>
+        {% endfor %}
+        
+    </div>
 
 {% endblock %}
