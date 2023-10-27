@@ -2,11 +2,19 @@
 
 
 {% block content %}
+
+    <form action="">
+        {{ form.as_p }}
+        <input type="submit" value="Search">
+
+    </form><br><br>
+
+
     <div class="card">
         {% for post in posts %}
             <a href="{{ post.get_absolute_url }}" class="card-body">{{ post.title }}</a>
         {% endfor %}
-        
+
     </div>
 
 {% endblock %}
